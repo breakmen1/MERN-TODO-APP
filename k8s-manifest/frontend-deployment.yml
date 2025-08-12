@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: akshaykumar0007/mern-todo-front:25
+          image: akshaykumar0007/mern-todo-front:26
           ports:
             - containerPort: 80
 
