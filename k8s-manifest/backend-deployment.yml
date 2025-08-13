@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: akshaykumar0007/mern-todo-back:55
+          image: akshaykumar0007/mern-todo-back:57
           ports:
             - containerPort: 8000
           envFrom:
