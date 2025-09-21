@@ -140,5 +140,6 @@ Built a production-grade CI/CD pipeline from scratch.
 **Jenkins CI/CD Pipeline:**
 ---
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/a3f154fb-c229-4fbd-8ca9-2716a69f6f52" />
+
 ---
 
