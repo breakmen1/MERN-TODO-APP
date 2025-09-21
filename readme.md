@@ -176,7 +176,7 @@ Built a production-grade CI/CD pipeline from scratch.
 
 ---
 
-**high level project overview:**
+**High level project overview:**
 
 ---
 
