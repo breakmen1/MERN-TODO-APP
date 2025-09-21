@@ -145,6 +145,7 @@ Built a production-grade CI/CD pipeline from scratch.
 ---
 
 **(GitOps) ArgoCD:**
+
 ---
 
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/53079520-8252-42e1-8d97-2d32d96e70d7" />
