@@ -13,14 +13,13 @@ Everything was built from scratch on bare-metal/on-premise infra, simulating a r
 
 **Project Evolution**
 
-**Development Phase**
-
+**Development Phase:**
 Built a raw MERN TODO app (frontend + backend).
 Connected to MongoDB.
 Verified app in dev mode.
 
 
-**Dockerization**
+**Dockerization:**
 Backend → Dockerized with Node.js, connected to MongoDB.
 Frontend → Dockerized React app with NGINX reverse proxy.
 Created a custom Docker network for service communication.
@@ -28,7 +27,7 @@ Used Docker Compose for multi-service orchestration.
 Persistent storage via volumes for MongoDB.
 
 
-**Kubernetes Migration**
+**Kubernetes Migration:**
 
 Set up a kubeadm cluster (1 master + 1 worker).
 Deployed frontend, backend, MongoDB with manifests.
@@ -38,31 +37,31 @@ PersistentVolume (PV) & PersistentVolumeClaim (PVC)
 Ensured data persistence across pod restarts.
 
 
-**Observability & Load Testing**
+**Observability & Load Testing:**
 Load-tested with Apache Benchmark (ab).
 Integrated Prometheus + Grafana (via Helm).
 Observed CPU/memory spikes with increasing users.
 
 
-**Networking & Load Balancing**
+**Networking & Load Balancing:**
 Deployed MetalLB for LoadBalancer IP assignment.
 Configured NGINX Ingress Controller for routing.
 External access enabled via LAN subnet dynamic IPs.
 
 
-**Security Enhancements**
+**Security Enhancements:**
 Exposed application via HTTPS using Cloudflared Tunnel with a free domain.
 Kubernetes Secrets & ConfigMaps for sensitive data.
 Migrated secrets management to HashiCorp Vault.
 
 
-**GitOps with ArgoCD**
+**GitOps with ArgoCD:**
 Installed ArgoCD and connected to this repo.
 Configured Helm charts for manifests.
 Enabled auto-sync → cluster always matches GitHub state.
 
 
-**CI/CD with Jenkins**
+**CI/CD with Jenkins:**
 Jenkins pipeline stages:
 
 1st stage---> Checkout Code or code clone 
@@ -79,20 +78,35 @@ Jenkins pipeline stages:
 **Repository Structure**
 .
 ├── backend/                  # Node.js backend
+
 ├── frontend/                 # React frontend
+
 ├── nginx/                    # Nginx reverse proxy configs
+
 ├── docker-compose.yml        # Multi-container setup
+
 ├── k8s-manifest/             # Kubernetes manifests
+
 │   ├── backend-deployment.yml
+
 │   ├── backend-service.yml
+
 │   ├── frontend-deployment.yml
+
 │   ├── frontend-service.yml
+
 │   ├── mongo-statefulset.yaml
+
 │   ├── mongo-pv-0.yaml
+
 │   ├── mongo-headless-service.yaml
+
 │   ├── ingress-nginx-svc.yaml
+
 │   └── metallb-config.yaml
+
 ├── Jenkinsfile               # CI/CD pipeline definition
+
 └── README.md                 # Basic repo info
 
 
