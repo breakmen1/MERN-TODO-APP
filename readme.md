@@ -21,7 +21,6 @@ Verified app in dev mode.
 
 
 **Dockerization**
-
 Backend → Dockerized with Node.js, connected to MongoDB.
 Frontend → Dockerized React app with NGINX reverse proxy.
 Created a custom Docker network for service communication.
