@@ -170,7 +170,7 @@ Built a production-grade CI/CD pipeline from scratch.
 
 ---
 
-**High level traffic flow from brower to application**
+**High level traffic flow from brower to application:**
 
 ---
 
@@ -178,6 +178,13 @@ Built a production-grade CI/CD pipeline from scratch.
 
 ---
 
+**high level project overview**
+
+---
+
+<img width="593" height="393" alt="image" src="https://github.com/user-attachments/assets/1dddc5a9-5bc4-4158-83ef-898848a60913" />
+
+---
 
 
 
