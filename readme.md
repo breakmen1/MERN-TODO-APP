@@ -144,7 +144,7 @@ Built a production-grade CI/CD pipeline from scratch.
 
 ---
 
-**(GitOps) ArgoCD:**
+**GitOps ArgoCD:**
 
 ---
 
