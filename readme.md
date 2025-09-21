@@ -4,7 +4,7 @@
 This repository showcases a **complete CI/CD pipeline implementation** for a MERN stack application.  
 What started as a raw MERN Todo App evolved into a **production-ready deployment** running on a **self-hosted Kubernetes cluster**, fully automated with **Jenkins + ArgoCD**.  
 
-**No cloud shortcuts** — everything was built from scratch on **bare-metal/on-premise infra**, simulating a **real-world enterprise environment**.  
+Everything was built from scratch on **bare-metal/on-premise infra**, simulating a **real-world enterprise environment**.  
 
 ---
 
