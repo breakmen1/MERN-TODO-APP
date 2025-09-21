@@ -1,28 +1,28 @@
 # MERN TODO App — End-to-End DevOps Project
 
-## 🚀 Overview
+## Overview
 This repository showcases a **complete CI/CD pipeline implementation** for a MERN stack application.  
 What started as a raw MERN Todo App evolved into a **production-ready deployment** running on a **self-hosted Kubernetes cluster**, fully automated with **Jenkins + ArgoCD**.  
 
-💥 **No cloud shortcuts** — everything was built from scratch on **bare-metal/on-premise infra**, simulating a **real-world enterprise environment**.  
+**No cloud shortcuts** — everything was built from scratch on **bare-metal/on-premise infra**, simulating a **real-world enterprise environment**.  
 
 ---
 
-## 🛠️ Project Evolution
+## Project Evolution
 
-### 1️⃣ Development Phase
+### Development Phase:
 - Built a raw **MERN TODO app** (frontend + backend).  
 - Connected to **MongoDB**.  
 - Verified app in **dev mode**.  
 
-### 2️⃣ Dockerization
+### Dockerization:
 - Backend → Dockerized with **Node.js**, connected to MongoDB.  
 - Frontend → Dockerized **React app with NGINX reverse proxy**.  
 - Created a **custom Docker network** for service communication.  
 - Used **Docker Compose** for multi-service orchestration.  
 - Persistent storage via **volumes** for MongoDB.  
 
-### 3️⃣ Kubernetes Migration
+### Kubernetes Migration:
 - Set up a **kubeadm cluster** (1 master + 1 worker).  
 - Deployed frontend, backend, MongoDB with **manifests**.  
 - Migrated MongoDB into a **StatefulSet** with:
@@ -30,27 +30,27 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
   - PersistentVolume (PV) & PersistentVolumeClaim (PVC)  
 - Ensured **data persistence** across pod restarts.  
 
-### 4️⃣ Observability & Load Testing
+### Observability & Load Testing:
 - Load-tested with **Apache Benchmark (ab)**.  
 - Integrated **Prometheus + Grafana** (via Helm).  
 - Observed **CPU/memory spikes** with increasing users.  
 
-### 5️⃣ Networking & Load Balancing
+### Networking & Load Balancing:
 - Deployed **MetalLB** for LoadBalancer IP assignment.  
 - Configured **NGINX Ingress Controller** for routing.  
 - External access enabled via **LAN subnet dynamic IPs**.  
 
-### 6️⃣ Security Enhancements
+### Security Enhancements:
 - Exposed application via **HTTPS** using **Cloudflared Tunnel** with a free domain.  
 - Used **Kubernetes Secrets & ConfigMaps** for sensitive data.  
 - Migrated **secrets management to HashiCorp Vault**.  
 
-### 7️⃣ GitOps with ArgoCD
+### GitOps with ArgoCD:
 - Installed **ArgoCD** and connected to this repo.  
 - Configured **Helm charts** for manifests.  
 - Enabled **auto-sync** → cluster always matches GitHub state.  
 
-### 8️⃣ CI/CD with Jenkins
+### CI/CD with Jenkins:
 **Jenkins pipeline stages:**
 1. Checkout Code  
 2. Build Docker Images (frontend + backend)  
@@ -62,7 +62,7 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure:
 ├── backend/ # Node.js backend
 
 ├── frontend/ # React frontend
@@ -98,7 +98,7 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 
 ---
 
-## 🔧 CI/CD Pipeline (Jenkinsfile)
+##  CI/CD Pipeline (Jenkinsfile)
 
 ### Pipeline Flow
 1. **Checkout Code** → Pull latest repo changes.  
@@ -107,11 +107,11 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 4. **Update K8s Manifests** → Replace old image versions with new build tag.  
 5. **Commit & Push to GitHub** → Repo updated → ArgoCD auto-syncs cluster.  
 
-✅ **Result → GitHub repo always in sync with running Kubernetes cluster.**  
+ **Result → GitHub repo always in sync with running Kubernetes cluster.**  
 
 ---
 
-## 📊 Tools & Technologies
+## Tools & Technologies:
 - **Application Layer:** MERN (MongoDB, Express.js, React, Node.js)  
 - **Containerization:** Docker, Docker Compose  
 - **Orchestration:** Kubernetes (kubeadm cluster)  
@@ -123,8 +123,8 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 
 ---
 
-## 🌐 Final Architecture
-```mermaid
+## Final Architecture:
+mermaid
 flowchart LR
     User((User)) --> Ingress[NGINX Ingress Controller]
     Ingress --> ALB[MetalLB LoadBalancer]
@@ -133,7 +133,7 @@ flowchart LR
     Backend --> DB[(MongoDB StatefulSet)]
 
 
-Outcome
+**Outcome:**
 
 End-to-End CI/CD for MERN app.
 GitOps-enabled → Cluster state always reflects GitHub repo.
@@ -141,7 +141,7 @@ Scalable & Secure Deployment on self-hosted Kubernetes.
 Hands-on exposure to real-world DevOps challenges.
 
 
-Key Takeaways
+**Key Takeaways:**
 
 Deep dive into Docker, Kubernetes, Jenkins, ArgoCD.
 Learned troubleshooting & debugging real-world issues.
