@@ -62,43 +62,7 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 
 ---
 
-## Repository Structure:
- MERN TODO App
-├── backend/                  # Node.js backend
 
-├── frontend/                 # React frontend
-
-├── nginx/                    # Nginx reverse proxy configs
-
-├── docker-compose.yml        # Multi-container setup
-
-├── k8s-manifest/             # Kubernetes manifests
-
-│   ├── backend-deployment.yml
-
-│   ├── backend-service.yml
-
-│   ├── frontend-deployment.yml
-
-│   ├── frontend-service.yml
-
-│   ├── mongo-statefulset.yaml
-
-│   ├── mongo-pv-0.yaml
-
-│   ├── mongo-headless-service.yaml
-
-│   ├── ingress-nginx-svc.yaml
-
-│   └── metallb-config.yaml
-
-├── Jenkinsfile               # CI/CD pipeline definition
-
-└── README.md                 # Project documentation
-
-
-
----
 
 ##  CI/CD Pipeline (Jenkinsfile)
 
