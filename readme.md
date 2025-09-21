@@ -8,7 +8,7 @@ Everything was built from scratch on **bare-metal/on-premise infra**, simulating
 
 ---
 
-## Project Evolution
+## Project Evolution:
 
 ### Development Phase:
 - Built a raw **MERN TODO app** (frontend + backend).  
