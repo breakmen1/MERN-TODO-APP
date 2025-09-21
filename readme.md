@@ -124,12 +124,17 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 ---
 
 ## Final Architecture:
-mermaid
+
 flowchart LR
+
     User((User)) --> Ingress[NGINX Ingress Controller]
+    
     Ingress --> ALB[MetalLB LoadBalancer]
+    
     ALB --> Frontend[React + Nginx Pod]
+    
     Frontend --> Backend[Node.js Pod]
+    
     Backend --> DB[(MongoDB StatefulSet)]
 
 
