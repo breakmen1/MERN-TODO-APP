@@ -178,11 +178,23 @@ Built a production-grade CI/CD pipeline from scratch.
 
 ---
 
-**high level project overview**
+**high level project overview:**
 
 ---
 
 <img width="593" height="393" alt="image" src="https://github.com/user-attachments/assets/1dddc5a9-5bc4-4158-83ef-898848a60913" />
+
+---
+
+**TODO application is up and running and user can access the domain securely**
+
+---
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/d58722b7-4eda-4dfd-ab29-eeb0979b5d5d" />
+
+---
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/758ab1d9-fcad-4e1e-841c-cfc99516fbc0" />
 
 ---
 
