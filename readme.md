@@ -58,41 +58,28 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 4. Update K8s Manifests with new image tags  
 5. Commit & Push Changes back to GitHub (triggers ArgoCD sync)  
 
-✅ **End result → Fully automated GitOps pipeline.**  
+**End result → Fully automated GitOps pipeline.**  
 
 ---
 
 ## Repository Structure:
-├── backend/ # Node.js backend
-
-├── frontend/ # React frontend
-
-├── nginx/ # Nginx reverse proxy configs
-
-├── docker-compose.yml # Multi-container setup
-
-├── k8s-manifest/ # Kubernetes manifests
-
-│ ├── backend-deployment.yml
-
-│ ├── backend-service.yml
-
-│ ├── frontend-deployment.yml
-
-│ ├── frontend-service.yml
-
-│ ├── mongo-statefulset.yaml
-
-│ ├── mongo-pv-0.yaml
-
-│ ├── mongo-headless-service.yaml
-│ ├── ingress-nginx-svc.yaml
-
-│ └── metallb-config.yaml
-
-├── Jenkinsfile # CI/CD pipeline definition
-
-└── README.md # Project documentation
+ MERN TODO App
+├── backend/                  # Node.js backend
+├── frontend/                 # React frontend
+├── nginx/                    # Nginx reverse proxy configs
+├── docker-compose.yml        # Multi-container setup
+├── k8s-manifest/             # Kubernetes manifests
+│   ├── backend-deployment.yml
+│   ├── backend-service.yml
+│   ├── frontend-deployment.yml
+│   ├── frontend-service.yml
+│   ├── mongo-statefulset.yaml
+│   ├── mongo-pv-0.yaml
+│   ├── mongo-headless-service.yaml
+│   ├── ingress-nginx-svc.yaml
+│   └── metallb-config.yaml
+├── Jenkinsfile               # CI/CD pipeline definition
+└── README.md                 # Project documentation
 
 
 
