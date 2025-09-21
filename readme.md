@@ -194,7 +194,7 @@ Built a production-grade CI/CD pipeline from scratch.
 
 ---
 
-<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/758ab1d9-fcad-4e1e-841c-cfc99516fbc0" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/7c43f8d7-044d-4b83-bd55-15b8608e5254" />
 
 ---
 
