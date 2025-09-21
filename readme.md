@@ -133,7 +133,7 @@ flowchart LR
     Backend --> DB[(MongoDB StatefulSet)]
 
 
-Outcome:
+Outcome
 
 End-to-End CI/CD for MERN app.
 GitOps-enabled → Cluster state always reflects GitHub repo.
@@ -141,7 +141,7 @@ Scalable & Secure Deployment on self-hosted Kubernetes.
 Hands-on exposure to real-world DevOps challenges.
 
 
-Key Takeaways:
+Key Takeaways
 
 Deep dive into Docker, Kubernetes, Jenkins, ArgoCD.
 Learned troubleshooting & debugging real-world issues.
