@@ -69,3 +69,75 @@ Jenkins pipeline stages:
 4th stage---> Update K8s Manifests with new image tags
 
 5ht stage---> Commit & Push Changes back to GitHub (triggers ArgoCD sync)
+
+
+**Repository Structure**
+.
+├── backend/                  # Node.js backend
+├── frontend/                 # React frontend
+├── nginx/                    # Nginx reverse proxy configs
+├── docker-compose.yml        # Multi-container setup
+├── k8s-manifest/             # Kubernetes manifests
+│   ├── backend-deployment.yml
+│   ├── backend-service.yml
+│   ├── frontend-deployment.yml
+│   ├── frontend-service.yml
+│   ├── mongo-statefulset.yaml
+│   ├── mongo-pv-0.yaml
+│   ├── mongo-headless-service.yaml
+│   ├── ingress-nginx-svc.yaml
+│   └── metallb-config.yaml
+├── Jenkinsfile               # CI/CD pipeline definition
+└── README.md                 # Basic repo info
+
+
+
+**CI/CD Pipeline (Jenkinsfile)**
+
+Pipeline Flow
+
+Checkout Code → Pull latest repo changes.
+Build Images → Frontend & Backend images built with tags (:build_number).
+Push to Docker Hub → Images pushed with version tag.
+Update K8s Manifests → Replace old image versions with new build tag.
+Commit & Push to GitHub → Repo updated → ArgoCD auto-syncs cluster.
+
+**End result → Fully automated GitOps pipeline.**
+
+
+**Tools & Technologies**
+
+Application Layer: MERN (MongoDB, Express.js, React, Node.js)
+Containerization: Docker, Docker Compose
+Orchestration: Kubernetes (kubeadm cluster)
+Networking: MetalLB, NGINX Ingress Controller
+Monitoring: Prometheus + Grafana
+Security: Kubernetes Secrets, ConfigMaps, HashiCorp Vault
+CI/CD: Jenkins, ArgoCD, GitHub
+Other: Cloudflared Tunnel for HTTPS
+
+
+**Final Architecture**
+
+flowchart LR
+    User((User)) --> Ingress[NGINX Ingress Controller]
+    Ingress --> ALB[MetalLB LoadBalancer]
+    ALB --> Frontend[React + Nginx Pod]
+    Frontend --> Backend[Node.js Pod]
+    Backend --> DB[(MongoDB StatefulSet)]
+
+
+**Outcome**
+
+**End-to-End CI/CD for MERN app**.
+GitOps-enabled → Cluster state always reflects GitHub repo.
+Scalable & Secure Deployment on self-hosted Kubernetes.
+Hands-on exposure to real-world DevOps challenges.
+
+
+**Key Takeaways**
+
+Deep dive into Docker, Kubernetes, Jenkins, ArgoCD.
+Learned troubleshooting & debugging real-world issues.
+Built production-grade CI/CD pipeline from scratch.
+
