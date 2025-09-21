@@ -9,13 +9,14 @@ Everything was built from scratch on bare-metal/on-premise infra, simulating a r
 
 **Project Evolution**
 
-1️⃣ Development Phase
+**Development Phase**
+
 Built a raw MERN TODO app (frontend + backend).
 Connected to MongoDB.
 Verified app in dev mode.
 
 
-2️⃣ Dockerization
+**Dockerization**
 Backend → Dockerized with Node.js, connected to MongoDB.
 Frontend → Dockerized React app with NGINX reverse proxy.
 Created a custom Docker network for service communication.
@@ -23,7 +24,7 @@ Used Docker Compose for multi-service orchestration.
 Persistent storage via volumes for MongoDB.
 
 
-3️⃣ Kubernetes Migration
+**Kubernetes Migration**
 Set up a kubeadm cluster (1 master + 1 worker).
 Deployed frontend, backend, MongoDB with manifests.
 Migrated MongoDB into a StatefulSet with:
@@ -32,31 +33,31 @@ PersistentVolume (PV) & PersistentVolumeClaim (PVC)
 Ensured data persistence across pod restarts.
 
 
-4️⃣ Observability & Load Testing
+**Observability & Load Testing**
 Load-tested with Apache Benchmark (ab).
 Integrated Prometheus + Grafana (via Helm).
 Observed CPU/memory spikes with increasing users.
 
 
-5️⃣ Networking & Load Balancing
+**Networking & Load Balancing**
 Deployed MetalLB for LoadBalancer IP assignment.
 Configured NGINX Ingress Controller for routing.
 External access enabled via LAN subnet dynamic IPs.
 
 
-6️⃣ Security Enhancements
+**Security Enhancements**
 Exposed application via HTTPS using Cloudflared Tunnel with a free domain.
 Kubernetes Secrets & ConfigMaps for sensitive data.
 Migrated secrets management to HashiCorp Vault.
 
 
-7️⃣ GitOps with ArgoCD
+**GitOps with ArgoCD**
 Installed ArgoCD and connected to this repo.
 Configured Helm charts for manifests.
 Enabled auto-sync → cluster always matches GitHub state.
 
 
-8️⃣ CI/CD with Jenkins
+**CI/CD with Jenkins**
 Jenkins pipeline stages:
 
 1st stage---> Checkout Code or code clone 
