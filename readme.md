@@ -93,3 +93,56 @@ What started as a raw MERN Todo App evolved into a **production-ready deployment
 ├── Jenkinsfile # CI/CD pipeline definition
 
 └── README.md # Project documentation
+
+
+
+---
+
+## 🔧 CI/CD Pipeline (Jenkinsfile)
+
+### Pipeline Flow
+1. **Checkout Code** → Pull latest repo changes.  
+2. **Build Images** → Frontend & Backend images built with tags (`:build_number`).  
+3. **Push to Docker Hub** → Images pushed with version tag.  
+4. **Update K8s Manifests** → Replace old image versions with new build tag.  
+5. **Commit & Push to GitHub** → Repo updated → ArgoCD auto-syncs cluster.  
+
+✅ **Result → GitHub repo always in sync with running Kubernetes cluster.**  
+
+---
+
+## 📊 Tools & Technologies
+- **Application Layer:** MERN (MongoDB, Express.js, React, Node.js)  
+- **Containerization:** Docker, Docker Compose  
+- **Orchestration:** Kubernetes (kubeadm cluster)  
+- **Networking:** MetalLB, NGINX Ingress Controller  
+- **Monitoring:** Prometheus + Grafana  
+- **Security:** Kubernetes Secrets, ConfigMaps, HashiCorp Vault  
+- **CI/CD:** Jenkins, ArgoCD, GitHub  
+- **Other:** Cloudflared Tunnel for HTTPS  
+
+---
+
+## 🌐 Final Architecture
+```mermaid
+flowchart LR
+    User((User)) --> Ingress[NGINX Ingress Controller]
+    Ingress --> ALB[MetalLB LoadBalancer]
+    ALB --> Frontend[React + Nginx Pod]
+    Frontend --> Backend[Node.js Pod]
+    Backend --> DB[(MongoDB StatefulSet)]
+
+
+**Outcome:**
+
+End-to-End CI/CD for MERN app.
+GitOps-enabled → Cluster state always reflects GitHub repo.
+Scalable & Secure Deployment on self-hosted Kubernetes.
+Hands-on exposure to real-world DevOps challenges.
+
+
+**Key Takeaways:**
+
+Deep dive into Docker, Kubernetes, Jenkins, ArgoCD.
+Learned troubleshooting & debugging real-world issues.
+Built a production-grade CI/CD pipeline from scratch.
