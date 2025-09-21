@@ -154,7 +154,7 @@ Built a production-grade CI/CD pipeline from scratch.
 
 **Kubeadm Cluster master (Dev) and slave (Dev1) node health monitoring using prometheus as data source and grafana as dashboard to visualize performance matrice:**
 
-Dev(Master):
+**Dev(Master):**
 
 ---
 
@@ -162,14 +162,22 @@ Dev(Master):
 
 ---
 
-Dev1(Worker):
+**Dev1(Worker):**
 
 ---
 
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/a6db27bc-e713-4539-835f-920b50eedd8e" />
 
+---
+
+**High level traffic flow from brower to application**
 
 ---
+
+<img width="794" height="467" alt="image" src="https://github.com/user-attachments/assets/bd04c6b6-574f-4cc2-8fd8-1ab19a4230e7" />
+
+---
+
 
 
 
