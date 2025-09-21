@@ -13,9 +13,7 @@ Everything was built from scratch on bare-metal/on-premise infra, simulating a r
 
 **Project Evolution**
 
-
 **Development Phase**
-
 
 Built a raw MERN TODO app (frontend + backend).
 Connected to MongoDB.
