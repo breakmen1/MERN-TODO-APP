@@ -139,7 +139,16 @@ Built a production-grade CI/CD pipeline from scratch.
 
 **Jenkins CI/CD Pipeline:**
 ---
+
 <img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/a3f154fb-c229-4fbd-8ca9-2716a69f6f52" />
 
 ---
+
+**(GitOps) ArgoCD:**
+---
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/53079520-8252-42e1-8d97-2d32d96e70d7" />
+
+---
+
 
