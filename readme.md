@@ -1,15 +1,21 @@
 **MERN TODO App — End-to-End DevOps Project**
+
 Overview
+
 
 This repository showcases a complete CI/CD pipeline implementation for a MERN stack application.
 What started as a raw MERN Todo App evolved into a production-ready deployment running on a self-hosted Kubernetes cluster, fully automated with Jenkins + ArgoCD.
 
+
 Everything was built from scratch on bare-metal/on-premise infra, simulating a real-world enterprise environment.
+
 
 
 **Project Evolution**
 
+
 **Development Phase**
+
 
 Built a raw MERN TODO app (frontend + backend).
 Connected to MongoDB.
@@ -17,6 +23,7 @@ Verified app in dev mode.
 
 
 **Dockerization**
+
 Backend → Dockerized with Node.js, connected to MongoDB.
 Frontend → Dockerized React app with NGINX reverse proxy.
 Created a custom Docker network for service communication.
@@ -25,6 +32,7 @@ Persistent storage via volumes for MongoDB.
 
 
 **Kubernetes Migration**
+
 Set up a kubeadm cluster (1 master + 1 worker).
 Deployed frontend, backend, MongoDB with manifests.
 Migrated MongoDB into a StatefulSet with:
